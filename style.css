@@ -1,0 +1,119 @@
+html,body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    padding-top: 1em;
+    text-align: center;
+    background-color:rgba(128, 128, 128, 0.338);
+    background-size: cover;
+    background-repeat: space;
+  }
+  
+
+  main {
+    /* background-image: url('../img/stone.png'); */
+    /* background-repeat: repeat; */
+    background-image: url('world.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+  }
+  #flag1{
+    width: 40px;
+    height: 40px;
+    margin-top:20%;
+  }
+  #flag2{
+    width: 40px;
+    height: 40px;
+  }
+  #flag3{
+    width: 40px;
+    height: 40px;
+  }
+  #flag4{
+    width: 40px;
+    height: 40px;
+  }
+  #flag5{
+    width: 40px;
+    height: 40px;
+  }
+  #flag6{
+    width: 40px;
+    height: 40px;
+  }
+  #flag7{
+    width: 40px;
+    height: 40px;
+  }
+  #flag8{
+    width: 40px;
+    height: 40px;
+  }
+  #flag9{
+    width: 40px;
+    height: 40px;
+  }
+  #flag10{
+    width: 40px;
+    height: 40px;
+  }
+  #flag11{
+    width: 40px;
+    height: 40px;
+  }
+ 
+  #flag12{
+    width: 40px;
+    height: 40px;
+  }
+  
+  /*#container {
+  max-width: 50em;
+  height: 70vh; 
+  background-color: rgb(111, 12, 32);
+  margin: 0 auto;
+  padding: 1em;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: .25fr .5fr .25fr;
+  grid-template-columns: .25fr .5fr .25fr;
+  grid-template-areas: "top-left top-left top-right"
+                        "game game game"
+                        "btm-left btm-right btm-right";
+  }*/
+  
+  /*#top-left, #top-right, #btm-left, #btm-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+  }*/
+  
+  /*#top-left {
+    grid-area: top-left;
+  }
+  
+  /*#top-right {
+    grid-area: top-right;
+    /* background-color: #222; */
+    /* background-image: url('../img/funky-lines.png'); */
+  
+  
+  main {
+    grid-area: game;
+  }
+  
+  
+  #btm-left {
+    grid-area: btm-left;
+    /* background-color: #222; */
+  }
+  
+ /* #btm-right {
+    grid-area: btm-right;
+  
+  }*/
