@@ -2,6 +2,11 @@ html,body {
     margin: 0;
     padding: 0;
   }
+  .container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
   
   body {
     padding-top: 1em;
@@ -18,89 +23,96 @@ html,body {
     background-image: url('world.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    position: center;
     
   }
   #flag1{
+    position: absolute;
+    bottom: 500px;
+    right: 500px;
     width: 40px;
     height: 40px;
-    margin-top:20%;
   }
   #flag2{
+    position: absolute;
+    bottom: 300px;
+    right: 400px;
     width: 40px;
     height: 40px;
   }
   #flag3{
+    position: absolute;
+    bottom: 400px;
+    left: 180px;
     width: 40px;
     height: 40px;
   }
   #flag4{
+    position: absolute;
+    bottom: 500px;
+    right: 500px;
     width: 40px;
     height: 40px;
   }
   #flag5{
+    position: absolute;
+    bottom: 500px;
+    right: 500px;
     width: 40px;
     height: 40px;
   }
   #flag6{
+    position: absolute;
+    bottom: 300px;
+    right: 400px;
     width: 40px;
     height: 40px;
   }
   #flag7{
+    position: absolute;
+    bottom: 500px;
+    right: 500px;
     width: 40px;
     height: 40px;
   }
   #flag8{
+    position: absolute;
+    bottom: 350px;
+    right: 450px;
     width: 40px;
     height: 40px;
   }
   #flag9{
+    position: absolute;
+    bottom: 00px;
+    left: 150px;
     width: 40px;
     height: 40px;
   }
   #flag10{
+    position: absolute;
+    bottom: 300px;
+    right: 400px;
     width: 40px;
     height: 40px;
   }
   #flag11{
+    position: absolute;
+    bottom: 500px;
+    right: 500px;
     width: 40px;
     height: 40px;
   }
  
   #flag12{
+    position: absolute;
+    bottom: 300px;
+    right: 400px;
     width: 40px;
     height: 40px;
   }
   
-  /*#container {
-  max-width: 50em;
-  height: 70vh; 
-  background-color: rgb(111, 12, 32);
-  margin: 0 auto;
-  padding: 1em;
-  display: grid;
-  grid-gap: 1em;
-  grid-template-rows: .25fr .5fr .25fr;
-  grid-template-columns: .25fr .5fr .25fr;
-  grid-template-areas: "top-left top-left top-right"
-                        "game game game"
-                        "btm-left btm-right btm-right";
-  }*/
   
-  /*#top-left, #top-right, #btm-left, #btm-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #222;
-  }*/
-  
-  /*#top-left {
-    grid-area: top-left;
-  }
-  
-  /*#top-right {
-    grid-area: top-right;
-    /* background-color: #222; */
-    /* background-image: url('../img/funky-lines.png'); */
   
   
   main {
@@ -110,10 +122,6 @@ html,body {
   
   #btm-left {
     grid-area: btm-left;
-    /* background-color: #222; */
+
   }
   
- /* #btm-right {
-    grid-area: btm-right;
-  
-  }*/

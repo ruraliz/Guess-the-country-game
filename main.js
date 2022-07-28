@@ -1,6 +1,6 @@
 const game = document.getElementById('game');
 const fly= document.getElementById('airplane');
-const cash= document.getElementById('top-left');
+const cash= document.getElementById('cash');
 
 let playerSelector= fly;
 let playerStatus = true;
@@ -18,17 +18,70 @@ game.setAttribute('width', getComputedStyle(game)['width']);
 
 //flags set timeout
 
-window.setTimeout("document.getElementById('flag1').style.display='block';", 0)
-window.setTimeout("document.getElementById('flag2').style.display='block';", 1000)
-window.setTimeout("document.getElementById('flag3').style.display='block';", 20000)
+const image1= document.getElementById('flag1')
+const image2= document.getElementById('flag2')
+const image3= document.getElementById('flag3')
+const image4= document.getElementById('flag4')
+const image5= document.getElementById('flag5')
+const image6= document.getElementById('flag6')
+const image7= document.getElementById('flag7')
+const image8= document.getElementById('flag8')
+const image9= document.getElementById('flag9')
+const image10= document.getElementById('flag10')
+const image11= document.getElementById('flag11')
+const image12= document.getElementById('flag12')
+
+image1.style.display= 'block';
+setTimeout(function(){
+    image1.style.display= 'none';
+image2.style.display= 'block'
+setTimeout(function(){
+    image2.style.display= 'none'
+image3.style.display= 'block'
+setTimeout(function(){
+    image3.style.display= 'none'
+image4.style.display= 'block'
+setTimeout(function(){
+    image4.style.display= 'none'
+image5.style.display= 'block'
+ setTimeout(function(){
+    image5.style.display= 'none'
+image6.style.display= 'block'
+setTimeout(function(){
+    image6.style.display= 'none'
+image7.style.display= 'block'
+setTimeout(function(){
+    image7.style.display= 'none'
+image8.style.display= 'block'
+setTimeout(function(){
+    image8.style.display= 'none'
+image9.style.display= 'block'
+setTimeout(function(){
+    image9.style.display= 'none'
+image10.style.display= 'block'
+setTimeout(function(){
+    image10.style.display= 'none'
+image11.style.display= 'block'
+setTimeout(function(){
+    image11.style.display= 'none'
+image12.style.display= 'block'
+setTimeout(function(){
+    image12.style.display= 'none'
+},4000);
+},4000);
+},4000);
+},4000);
+},4000);
+},4000);
+},4000);
+},4000);
+},4000);
+},4000);
+},4000);
+},4000);
 
 
-
-
-
-
-
-//arrow
+//airplane
 class Selector{
     constructor(x,y,width,height) {
         this.x = x
@@ -67,13 +120,13 @@ function movementHandler(e) {
         land.y-10 >= 0 ? (land.y -= 10) : null; 
         break;
         case 'a':
-         land.x - 10 >= 0 ? (arrow.x -= 10) : null;
+         land.x - 10 >= 0 ? (land.x -= 10) : null;
             break;
         case 's':
-            land.y + 10 <= game.height ? (arrow.y += 10) : null;
+            land.y + 10 <= game.height ? (land.y += 10) : null;
              break;
         case 'd' :
-            land.x +10 <= game.width ? (arrow.x += 10) : null;
+            land.x +10 <= game.width ? (land.x += 10) : null;
             break;
 
 
@@ -83,6 +136,62 @@ function movementHandler(e) {
 function detectFalg(arrow, flag){
 
 }
-//default value- hidden 
-//different set timeout
-    //inside 
+
+
+//Input correct answer 
+const answer= document.getElementById('country');
+function correctAnswer(){
+    if(image1.style.display= 'block' && answer.value === 'Belgium'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else if(image2.style.display= 'block' && answer.value === 'Burundi'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else if(image3.style.display= 'block' && answer.value === 'Cuba'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else if(image4.style.display= 'block' && answer.value === 'Denmark'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else if(image5.style.display= 'block' && answer.value === 'France'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else if(image6.style.display= 'block' && answer.value === 'Kenya'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else if(image7.style.display= 'block' && answer.value === 'Lithuania'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else if(image8.style.display= 'block' && answer.value === 'Morocco'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else if(image9.style.display= 'block' && answer.value === 'Puerto Rico'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else if(image10.style.display= 'block' && answer.value === 'Rwanda'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else if(image11.style.display= 'block' && answer.value === 'Thailand'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else if(image12.style.display= 'block' && answer.value === 'Togo'){
+        window.alert('Correct');
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    } else{
+        window.alert('Try again')
+        let newCash= Number(cash.textContent) - 50;
+        cash.textContent= newCash;
+    }
+}
