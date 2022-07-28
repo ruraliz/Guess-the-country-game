@@ -10,3 +10,5 @@ Game rules
 <img width="443" alt="Screen Shot 2022-07-26 at 9 59 37 PM" src="https://user-images.githubusercontent.com/107972391/181173014-e92f3c1f-a120-41e0-a4e9-1f44e4f26e04.png">
 
 ##
+
+Instruction 
