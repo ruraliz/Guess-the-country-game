@@ -1,11 +1,14 @@
-html,body {
-    margin: 0;
-    padding: 0;
-  }
-  .container{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+
+  canvas{
+    background-image: url('world.png');
+    width: 90%;
+    height: 100%;
+    border: 10px inset black;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+
+    
   }
   
   body {
@@ -14,36 +17,31 @@ html,body {
     background-color:rgba(128, 128, 128, 0.338);
     background-size: cover;
     background-repeat: space;
+    position: relative;
   }
-  
+  #container {
+    max-width: 50em;
+    background-color: rgb(172, 163, 165);
+    margin: 0 auto;
+    padding: 1em;
+    display: grid;
+    grid-gap: 1em;
 
-  main {
-    /* background-image: url('../img/stone.png'); */
-    /* background-repeat: repeat; */
-    background-image: url('world.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    position: center;
-    
+    }
+  .image{
+    position: absolute;
+    bottom: 200px;
+    right: 100px;
   }
   #flag1{
-    position: absolute;
-    bottom: 500px;
-    right: 500px;
     width: 40px;
     height: 40px;
   }
   #flag2{
-    position: absolute;
-    bottom: 300px;
-    right: 400px;
     width: 40px;
     height: 40px;
   }
   #flag3{
-    position: absolute;
-    bottom: 400px;
-    left: 180px;
     width: 40px;
     height: 40px;
   }
@@ -112,16 +110,32 @@ html,body {
     height: 40px;
   }
   
-  
-  
-  
-  main {
-    grid-area: game;
-  }
-  
-  
-  #btm-left {
-    grid-area: btm-left;
+.multiplechoice{
+  display: flex;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  border-radius: 4px;
+  background: rgb(205, 204, 204);
+  font-size: 3rem;
+  min-width: 80rem;
+}
 
-  }
+.multiplechoice:hover{
+  cursor: pointer;
+  box-shadow:0 0.4rem 1.4rem 0 rgb(205, 205, 205);
+  transform: scale(1.02);
+  transform: transform 100ms;
+}
+.choice-prefix{
+  padding: 2rem 2.5rem;
+  color: white;
+}
+.choice-text{
+  padding: 2rem;
+  width:100%;
+}
+.correct{
+  background: linear-gradient(32deg,rgb(7, 191, 7),36);
+}
+
   

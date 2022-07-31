@@ -8,29 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <aside id="top-left">CASH PRIZE<h2 id= "cash">500</h2></aside>
-        <main>
-            <canvas id="game"width= '800' height= '600'></canvas>
-                <img src="Belgium.png"id="flag1" size="5" style="display:none;">
-                <img src="Burundi.webp"id="flag2" style="display:none;">
-                <img src="Cuba.webp"id="flag3" style="display: none;">
-                <img src="Denmark.png"id="flag4" style="display: none;">
-                <img src="France.png"id="flag5" style="display: none;">
-                <img src="Kenya.webp"id="flag6" style="display: none;">
-                <img src="Lithuania.png"id="flag7" style="display: none;">
-                <img src="Morocco.png"id="flag8" style="display: none;">
-                <img src="Puerto Rico.png"id="flag9" style="display: none;">
-                <img src="Rwanda.png"id="flag10" style="display: none;">
-                <img src="Thailand.jpeg"id="flag11" style="display: none;">
-                <img src="Togo.png"id="flag12" style="display: none;">
-        </main>     
-        <div class="input">
-        <label for="Country-Name"></label>
-        <input type="text" id="country" name='country-name' size= "30"/>
-        <button size= '30' type="button" onclick= "correctAnswer();">Submit</button>
-        </div>
+    <div class="image">
+    <img src="Belgium.png"id="flag1" size="5" style="display:none;">
+    <img src="Burundi.webp"id="flag2" style="display:none;">
+    <img src="Cuba.webp"id="flag3" style="display: none;">
+    <img src="Denmark.png"id="flag4" style="display: none;">
+    <img src="France.png"id="flag5" style="display: none;">
+    <img src="Kenya.webp"id="flag6" style="display: none;">
+    <img src="Lithuania.png"id="flag7" style="display: none;">
+    <img src="Morocco.png"id="flag8" style="display: none;">
+    <img src="Puerto Rico.png"id="flag9" style="display: none;">
+    <img src="Rwanda.png"id="flag10" style="display: none;">
+    <img src="Thailand.jpeg"id="flag11" style="display: none;">
+    <img src="Togo.png"id="flag12" style="display: none;">
     </div>
-<script src="main.js"></script>
+    <div id="container">
+        <aside id="top-left">CASH PRIZE $$<h2 id= "cash">0</h2></aside>
+        <main> 
+            <canvas id="game"></canvas>
+        </main>
+    </div>
+    <p>What is the name of the Country</p>
+    <div id="mutiplechoice">
+    <input type="radio" /><label id="choice-1-label"></label>
+    <input type="radio" /><label id="choice-2-label"></label>
+    <input type="radio" /><label id="choice-3-label"></label>
+    <input type="radio" /><label id="choice-4-label"></label>
+    </div>
+    <div id="timer"></div>
+    <button type="submit" onclick="correctAnswer();" id="answer">submit</button>
+    <script src="main.js"></script>
 </body>
 </html>
+

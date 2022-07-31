@@ -2,6 +2,7 @@ const game = document.getElementById('game');
 const fly= document.getElementById('airplane');
 const cash= document.getElementById('cash');
 
+
 let playerSelector= fly;
 let playerStatus = true;
 
@@ -139,59 +140,100 @@ function detectFalg(arrow, flag){
 
 
 //Input correct answer 
-const answer= document.getElementById('country');
-function correctAnswer(){
-    if(image1.style.display= 'block' && answer.value === 'Belgium'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else if(image2.style.display= 'block' && answer.value === 'Burundi'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else if(image3.style.display= 'block' && answer.value === 'Cuba'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else if(image4.style.display= 'block' && answer.value === 'Denmark'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else if(image5.style.display= 'block' && answer.value === 'France'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else if(image6.style.display= 'block' && answer.value === 'Kenya'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else if(image7.style.display= 'block' && answer.value === 'Lithuania'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else if(image8.style.display= 'block' && answer.value === 'Morocco'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else if(image9.style.display= 'block' && answer.value === 'Puerto Rico'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else if(image10.style.display= 'block' && answer.value === 'Rwanda'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else if(image11.style.display= 'block' && answer.value === 'Thailand'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else if(image12.style.display= 'block' && answer.value === 'Togo'){
-        window.alert('Correct');
-        let newCash= Number(cash.textContent) + 50;
-        cash.textContent= newCash;
-    } else{
-        window.alert('Try again')
-        let newCash= Number(cash.textContent) - 50;
-        cash.textContent= newCash;
-    }
+
+
+//Start page 
+
+//mutiple choice
+
+const choiceOneLabel = document.getElementById('choice-1-label').next();
+const choiceTwoLabel = document.getElementById('choice-2-label').next();
+const choiceThreeLabel = document.getElementById('choice-3-label').next();
+const choiceFourLabel = document.getElementById('choice-4-label').next();
+if(image1.style.display='block'){
+    choiceOneLabel.textContent= 'France'
+    choiceTwoLabel.textContent= 'Belgium'
+    choiceThreeLabel.textContent= 'Tunisia'
+    choiceFourLabel.textContent= 'Chile'
+}else if(image2.style.display='block'){
+    choiceTwoLabel.textContent= 'Greece'
+    choiceThreeLabel.textContent= 'Tunisia'
+    choiceFourLabel.textContent= 'Burundi'
+}else if(image3.style.display='block'){
+    choiceOneLabel.textContent= 'Togo'
+    choiceTwoLabel.textContent= 'France'
+    choiceThreeLabel.textContent= 'Kenya'
+    choiceFourLabel.textContent= 'Cuba'
+}else if(image4.style.display='block'){
+        choiceOneLabel.textContent= 'Thailand'
+        choiceTwoLabel.textContent= 'Belgium'
+        choiceThreeLabel.textContent= 'Denmark'
+        choiceFourLabel.textContent= 'Chile'
+}else{
+    window.alert('Play Again?')
 }
+
+
+
+//grab answer
+
+
+   function correctAnswer(){
+        if(image1.style.display= 'block' && choiceTwo.checked === true){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else if(image2.style.display= 'block' && answer.value === 'Burundi'){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else if(image3.style.display= 'block' && answer.value === 'Cuba'){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else if(image4.style.display= 'block' && answer.value === 'Denmark'){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else if(image5.style.display= 'block' && answer.value === 'France'){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else if(image6.style.display= 'block' && answer.value === 'Kenya'){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else if(image7.style.display= 'block' && answer.value === 'Lithuania'){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else if(image8.style.display= 'block' && answer.value === 'Morocco'){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else if(image9.style.display= 'block' && answer.value === 'Puerto Rico'){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else if(image10.style.display= 'block' && answer.value === 'Rwanda'){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else if(image11.style.display= 'block' && answer.value === 'Thailand'){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else if(image12.style.display= 'block' && answer.value === 'Togo'){
+            window.alert('Correct');
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+        } else{
+            window.alert('Try again')
+            let newCash= Number(cash.textContent) - 50;
+            cash.textContent= newCash;
+        }
+    }
+    
+
+
+//sound
