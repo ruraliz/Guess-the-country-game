@@ -1,12 +1,5 @@
 const game = document.getElementById('game');
-const fly= document.getElementById('airplane');
 const cash= document.getElementById('cash');
-
-
-let playerSelector= fly;
-let playerStatus = true;
-
-let land;
 
 const computedStyle = getComputedStyle(game);
 const height = computedStyle.height;
@@ -34,36 +27,80 @@ const image12= document.getElementById('flag12')
 
 image1.style.display= 'block';
 setTimeout(function(){
+    choiceOneLabel.textContent= 'Denmark'
+    choiceTwoLabel.textContent= 'Greece'
+    choiceThreeLabel.textContent= 'Tunisia'
+    choiceFourLabel.textContent= 'Burundi'
     image1.style.display= 'none';
 image2.style.display= 'block'
 setTimeout(function(){
+    choiceOneLabel.textContent= 'Togo'
+    choiceTwoLabel.textContent= 'France'
+    choiceThreeLabel.textContent= 'Kenya'
+    choiceFourLabel.textContent= 'Cuba'
     image2.style.display= 'none'
 image3.style.display= 'block'
 setTimeout(function(){
+    choiceOneLabel.textContent= 'Thailand'
+    choiceTwoLabel.textContent= 'Belgium'
+    choiceThreeLabel.textContent= 'Denmark'
+    choiceFourLabel.textContent= 'Chile'
     image3.style.display= 'none'
 image4.style.display= 'block'
 setTimeout(function(){
+    choiceOneLabel.textContent= 'France'
+    choiceTwoLabel.textContent= 'Belgium'
+    choiceThreeLabel.textContent= 'England'
+    choiceFourLabel.textContent= 'South Korea'
     image4.style.display= 'none'
 image5.style.display= 'block'
  setTimeout(function(){
+    choiceOneLabel.textContent= 'Brazil'
+    choiceTwoLabel.textContent= 'Kenya'
+    choiceThreeLabel.textContent= 'South Africa'
+    choiceFourLabel.textContent= 'Qatar'
     image5.style.display= 'none'
 image6.style.display= 'block'
 setTimeout(function(){
+    choiceOneLabel.textContent= 'Lithuania'
+    choiceTwoLabel.textContent= 'India'
+    choiceThreeLabel.textContent= 'Senegal'
+    choiceFourLabel.textContent= 'Rwanda'
     image6.style.display= 'none'
 image7.style.display= 'block'
 setTimeout(function(){
+    choiceOneLabel.textContent= 'Tanzania'
+    choiceTwoLabel.textContent= 'Haiti'
+    choiceThreeLabel.textContent= 'Australia'
+    choiceFourLabel.textContent= 'Morocco'
     image7.style.display= 'none'
 image8.style.display= 'block'
 setTimeout(function(){
+    choiceOneLabel.textContent= 'Rusia'
+    choiceTwoLabel.textContent= 'Puerto Rico'
+    choiceThreeLabel.textContent= 'Ireland'
+    choiceFourLabel.textContent= 'Jordan'
     image8.style.display= 'none'
 image9.style.display= 'block'
 setTimeout(function(){
+    choiceOneLabel.textContent= 'Somalia'
+    choiceTwoLabel.textContent= 'Rwanda'
+    choiceThreeLabel.textContent= 'Ukraine'
+    choiceFourLabel.textContent= 'Philippines'
     image9.style.display= 'none'
 image10.style.display= 'block'
 setTimeout(function(){
+    choiceOneLabel.textContent= 'Costa Rica'
+    choiceTwoLabel.textContent= 'China'
+    choiceThreeLabel.textContent= 'France'
+    choiceFourLabel.textContent= 'Thailand'
     image10.style.display= 'none'
 image11.style.display= 'block'
 setTimeout(function(){
+    choiceOneLabel.textContent= 'Sweden'
+    choiceTwoLabel.textContent= 'India'
+    choiceThreeLabel.textContent= 'Togo'
+    choiceFourLabel.textContent= 'Chad'
     image11.style.display= 'none'
 image12.style.display= 'block'
 setTimeout(function(){
@@ -82,61 +119,7 @@ setTimeout(function(){
 },4000);
 
 
-//airplane
-class Selector{
-    constructor(x,y,width,height) {
-        this.x = x
-        this. y = y
-        this.width = width
-        this.height = height
-        this.alive = true
-    }
-    render() {
-        ctx.drawImage(fly, this.x, this.y, this.width, this.height)
-    }
-}
 
-//Event listener
-window.addEventListener('DOMContentLoaded', function(){
-    land= new Selector(100, 100, 25, 25);
-});
-document.addEventListener('keydown', movementHandler);
-
-//Key controls
-function movementHandler(e) {
-    switch(e.key){
-        case'ArrowUp':
-        land.y-10 >= 0 ? (land.y -= 10) : null; 
-        break;
-        case 'ArrowLeft':
-         land.x - 10 >= 0 ? (land.x -= 10) : null;
-            break;
-        case 'ArrowDown':
-            land.y + 10 <= game.height ? (land.y += 10) : null;
-             break;
-        case 'ArrowRight' :
-            land.x +10 <= game.width ? (land.x += 10) : null;
-            break;
-            case'w':
-        land.y-10 >= 0 ? (land.y -= 10) : null; 
-        break;
-        case 'a':
-         land.x - 10 >= 0 ? (land.x -= 10) : null;
-            break;
-        case 's':
-            land.y + 10 <= game.height ? (land.y += 10) : null;
-             break;
-        case 'd' :
-            land.x +10 <= game.width ? (land.x += 10) : null;
-            break;
-
-
-    }
-}
-//detection of flag collision 
-function detectFalg(arrow, flag){
-
-}
 
 
 //Input correct answer 
@@ -145,85 +128,65 @@ function detectFalg(arrow, flag){
 //Start page 
 
 //mutiple choice
+const choiceOne = document.getElementById('choice-1');
+const choiceTwo = document.getElementById('choice-2');
+const choiceThree = document.getElementById('choice-3');
+const choiceFour = document.getElementById('choice-4');
+const choiceOneLabel = document.getElementById('choice-1-label');
+const choiceTwoLabel = document.getElementById('choice-2-label');
+const choiceThreeLabel = document.getElementById('choice-3-label');
+const choiceFourLabel = document.getElementById('choice-4-label');
 
-const choiceOneLabel = document.getElementById('choice-1-label').next();
-const choiceTwoLabel = document.getElementById('choice-2-label').next();
-const choiceThreeLabel = document.getElementById('choice-3-label').next();
-const choiceFourLabel = document.getElementById('choice-4-label').next();
-if(image1.style.display='block'){
-    choiceOneLabel.textContent= 'France'
-    choiceTwoLabel.textContent= 'Belgium'
-    choiceThreeLabel.textContent= 'Tunisia'
-    choiceFourLabel.textContent= 'Chile'
-}else if(image2.style.display='block'){
-    choiceTwoLabel.textContent= 'Greece'
-    choiceThreeLabel.textContent= 'Tunisia'
-    choiceFourLabel.textContent= 'Burundi'
-}else if(image3.style.display='block'){
-    choiceOneLabel.textContent= 'Togo'
-    choiceTwoLabel.textContent= 'France'
-    choiceThreeLabel.textContent= 'Kenya'
-    choiceFourLabel.textContent= 'Cuba'
-}else if(image4.style.display='block'){
-        choiceOneLabel.textContent= 'Thailand'
-        choiceTwoLabel.textContent= 'Belgium'
-        choiceThreeLabel.textContent= 'Denmark'
-        choiceFourLabel.textContent= 'Chile'
-}else{
-    window.alert('Play Again?')
-}
-
+//When game ends 
 
 
 //grab answer
-
-
    function correctAnswer(){
         if(image1.style.display= 'block' && choiceTwo.checked === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image2.style.display= 'block' && answer.value === 'Burundi'){
+        } else if(image2.style.display= 'block' && choiceFour === true ){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image3.style.display= 'block' && answer.value === 'Cuba'){
+        } else if(image3.style.display= 'block' && choiceFour.checked === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image4.style.display= 'block' && answer.value === 'Denmark'){
+        } else if(image4.style.display= 'block' && choiceThree.checked === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image5.style.display= 'block' && answer.value === 'France'){
+        } else if(image5.style.display= 'block' && choiceOne.checked === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image6.style.display= 'block' && answer.value === 'Kenya'){
+        } else if(image6.style.display= 'block' && choiceTwo.checked === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image7.style.display= 'block' && answer.value === 'Lithuania'){
+        } else if(image7.style.display= 'block' && choiceOne.checked === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image8.style.display= 'block' && answer.value === 'Morocco'){
+        } else if(image8.style.display= 'block' && choiceFour.checked === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image9.style.display= 'block' && answer.value === 'Puerto Rico'){
+        } else if(image9.style.display= 'block' && choiceTwo.checked === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image10.style.display= 'block' && answer.value === 'Rwanda'){
+        } else if(image10.style.display= 'block' && choiceTwo === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image11.style.display= 'block' && answer.value === 'Thailand'){
+        } else if(image11.style.display= 'block' && choiceFour.checked === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image12.style.display= 'block' && answer.value === 'Togo'){
+        } else if(image12.style.display= 'block' && choiceThree.checked === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
@@ -236,4 +199,28 @@ if(image1.style.display='block'){
     
 
 
-//sound
+//Timer
+
+var seconds=4;
+var counter = null;
+
+function reset_timer()
+{
+    seconds= 4;
+    counter=setInterval(timer, 1000); 
+}
+
+reset_timer();
+
+function timer()
+{
+  seconds--;
+  if (seconds <= 0)
+  {
+    clearInterval(counter);
+    setTimeout(reset_timer, 0);
+    return;
+   }
+
+ document.getElementById("seconds").innerHTML="Time Left " + seconds; 
+ }

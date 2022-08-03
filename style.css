@@ -1,14 +1,12 @@
 
+/* Game CSS*/
   canvas{
     background-image: url('world.png');
     width: 90%;
-    height: 100%;
+    height: 95%;
     border: 10px inset black;
+    position: center;
     background-size: 100% 100%;
-    background-repeat: no-repeat;
-
-
-    
   }
   
   body {
@@ -22,7 +20,7 @@
   #container {
     max-width: 50em;
     background-color: rgb(172, 163, 165);
-    margin: 0 auto;
+    margin: auto;
     padding: 1em;
     display: grid;
     grid-gap: 1em;
@@ -31,7 +29,18 @@
   .image{
     position: absolute;
     bottom: 200px;
-    right: 100px;
+    right:400px;
+  }
+  #seconds{
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(5, 96, 5)
+  }
+  #prize{
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+    margin: -40px;
   }
   #flag1{
     width: 40px;
@@ -46,96 +55,85 @@
     height: 40px;
   }
   #flag4{
-    position: absolute;
-    bottom: 500px;
-    right: 500px;
     width: 40px;
     height: 40px;
   }
   #flag5{
-    position: absolute;
-    bottom: 500px;
-    right: 500px;
     width: 40px;
     height: 40px;
   }
   #flag6{
-    position: absolute;
-    bottom: 300px;
-    right: 400px;
     width: 40px;
     height: 40px;
   }
   #flag7{
-    position: absolute;
-    bottom: 500px;
-    right: 500px;
     width: 40px;
     height: 40px;
   }
   #flag8{
-    position: absolute;
-    bottom: 350px;
-    right: 450px;
     width: 40px;
     height: 40px;
   }
   #flag9{
-    position: absolute;
-    bottom: 00px;
-    left: 150px;
     width: 40px;
     height: 40px;
   }
   #flag10{
-    position: absolute;
-    bottom: 300px;
-    right: 400px;
+    
     width: 40px;
     height: 40px;
   }
   #flag11{
-    position: absolute;
-    bottom: 500px;
-    right: 500px;
+    
     width: 40px;
     height: 40px;
   }
- 
+
   #flag12{
-    position: absolute;
-    bottom: 300px;
-    right: 400px;
+  
     width: 40px;
     height: 40px;
   }
-  
-.multiplechoice{
-  display: flex;
-  margin-bottom: 0.8rem;
+
+/* start page style*/
+body{
+  background-color: black;
+}
+.btn{
+  font-weight: bold;
+  color: green;
+  font-size: 50px;
+}
+
+/* End Page CSS*/
+
+.end-form-container{
   width: 100%;
-  border-radius: 4px;
-  background: rgb(205, 204, 204);
-  font-size: 3rem;
-  min-width: 80rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30rem;
 }
-
-.multiplechoice:hover{
-  cursor: pointer;
-  box-shadow:0 0.4rem 1.4rem 0 rgb(205, 205, 205);
-  transform: scale(1.02);
-  transform: transform 100ms;
+input{
+  margin-bottom: 1rem;
+  width: 20px;
+  padding: 1px;
+  font-size: 1px;
+  border: none;
 }
-.choice-prefix{
-  padding: 2rem 2.5rem;
-  color: white;
+input::placeholder{
+  color:#aaa;
 }
-.choice-text{
-  padding: 2rem;
-  width:100%;
+#end-text{
+  font-size: 2px;
+  color: #fff;
+  text-align: center;
 }
-.correct{
-  background: linear-gradient(32deg,rgb(7, 191, 7),36);
+#savedCash{
+  border:none;
 }
-
-  
+.gohome{
+  margin-left: 1rem;
+  font-size:2px;
+  color: black;
+}
