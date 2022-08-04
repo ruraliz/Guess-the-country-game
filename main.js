@@ -29,13 +29,14 @@ const gameOver= document.getElementById('gameover-screen')
 
 function gameStart(){
 image1.style.display= 'block';
-setTimeout(function(){
+let t= setTimeout(function(){ 
     choiceOneLabel.textContent= 'Denmark'
     choiceTwoLabel.textContent= 'Greece'
     choiceThreeLabel.textContent= 'Tunisia'
     choiceFourLabel.textContent= 'Burundi'
     image1.style.display= 'none';
-image2.style.display= 'block'
+image2.style.display= 'block' 
+},1000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Togo'
     choiceTwoLabel.textContent= 'France'
@@ -43,6 +44,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Cuba'
     image2.style.display= 'none'
 image3.style.display= 'block'
+},4000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Thailand'
     choiceTwoLabel.textContent= 'Belgium'
@@ -50,6 +52,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Chile'
     image3.style.display= 'none'
 image4.style.display= 'block'
+},7000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'France'
     choiceTwoLabel.textContent= 'Belgium'
@@ -57,6 +60,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'South Korea'
     image4.style.display= 'none'
 image5.style.display= 'block'
+},10000);
  setTimeout(function(){
     choiceOneLabel.textContent= 'Brazil'
     choiceTwoLabel.textContent= 'Kenya'
@@ -64,6 +68,7 @@ image5.style.display= 'block'
     choiceFourLabel.textContent= 'Qatar'
     image5.style.display= 'none'
 image6.style.display= 'block'
+},13000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Lithuania'
     choiceTwoLabel.textContent= 'India'
@@ -71,6 +76,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Rwanda'
     image6.style.display= 'none'
 image7.style.display= 'block'
+},16000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Tanzania'
     choiceTwoLabel.textContent= 'Haiti'
@@ -78,6 +84,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Morocco'
     image7.style.display= 'none'
 image8.style.display= 'block'
+},19000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Rusia'
     choiceTwoLabel.textContent= 'Puerto Rico'
@@ -85,6 +92,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Jordan'
     image8.style.display= 'none'
 image9.style.display= 'block'
+},22000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Somalia'
     choiceTwoLabel.textContent= 'Rwanda'
@@ -92,6 +100,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Philippines'
     image9.style.display= 'none'
 image10.style.display= 'block'
+},25000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Costa Rica'
     choiceTwoLabel.textContent= 'China'
@@ -99,6 +108,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Thailand'
     image10.style.display= 'none'
 image11.style.display= 'block'
+},28000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Sweden'
     choiceTwoLabel.textContent= 'India'
@@ -106,29 +116,16 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Chad'
     image11.style.display= 'none'
 image12.style.display= 'block'
+},31000);
 setTimeout(function(){
     image12.style.display= 'none'
 gameOver.style.display='block'
-clearInterval(gameStart)
+},34000);
 setTimeout(function(){
     alert('Game Over')
-
-},1000);
-},4000);
-},4000);
-},4000);
-},4000);
-},4000);
-},4000);
-},4000);
-},4000);
-},4000);
-},4000);
-},4000);
-},4000);
-
+},37000);
 }
-gameStart()
+gameStart();
 
 
 
@@ -141,28 +138,41 @@ gameStart()
 
 //mutiple choice
 const choiceOne = document.getElementById('choice-1');
+choiceOne.checked= false
 const choiceTwo = document.getElementById('choice-2');
+choiceTwo.checked= false
 const choiceThree = document.getElementById('choice-3');
+choiceThree.checked= false
 const choiceFour = document.getElementById('choice-4');
 const choiceOneLabel = document.getElementById('choice-1-label');
 const choiceTwoLabel = document.getElementById('choice-2-label');
 const choiceThreeLabel = document.getElementById('choice-3-label');
 const choiceFourLabel = document.getElementById('choice-4-label');
 
+
+//choiceTwo.setAttribute('style','checked:false');
+//choiceOne.setAttribute('style','checked:false');
+
 //When game ends 
 
 
 //grab answer
-   function correctAnswer(){
-        if(image1.style.display= 'block' && answer.value === 'Belgium'){
+   function correctAnswer(event){
+    event.preventDefault()
+    switch(event.key){
+        case 'image-1':
+        (image1.style.display= 'block' && answer.value === 'Belgium');
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image2.style.display= 'block' && choiceFourLabel.checked === true ){
+        break;
+        case 'image2':
+        (image2.style.display= 'block' && choiceFourLabel.checked === true );
             window.alert('Correct');
-            let newCash= Number(cash.textContent) + 50;
-            cash.textContent= newCash;
-        } else if(image3.style.display= 'block' && choiceFour.checked === true){
+            let newCash2= Number(cash.textContent) + 50;
+            cash.textContent= newCash2;
+        break;
+        /* } else if(image3.style.display= 'block' && choiceFour.checked === true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
@@ -190,7 +200,7 @@ const choiceFourLabel = document.getElementById('choice-4-label');
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image10.style.display= 'block' && choiceTwo === true){
+        } else if(image10.style.display= 'block' && choiceTwo.checked=== true){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
@@ -206,9 +216,9 @@ const choiceFourLabel = document.getElementById('choice-4-label');
             window.alert('Try again')
             let newCash= Number(cash.textContent) - 50;
             cash.textContent= newCash;
-        }
+        }*/
     }
-    
+}
 
 
 //Timer

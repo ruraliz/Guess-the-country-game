@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Country Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+        <aside id="prize"><h2 id= "cash">0</h2></aside>
+        <label id="seconds"> Time Left 00</label>
+        <main> 
+            <canvas id="game"></canvas>
+            <div class="image">
+                <img src="Belgium.png"id="flag1" size="5" style="display:none;">
+                <img src="Burundi.webp"id="flag2" style="display:none;">
+                <img src="Cuba.webp"id="flag3" style="display: none;">
+                <img src="Denmark.png"id="flag4" style="display: none;">
+                <img src="France.png"id="flag5" style="display: none;">
+                <img src="Kenya.webp"id="flag6" style="display: none;">
+                <img src="Lithuania.png"id="flag7" style="display: none;">
+                <img src="Morocco.png"id="flag8" style="display: none;">
+                <img src="Puerto Rico.png"id="flag9" style="display: none;">
+                <img src="Rwanda.png"id="flag10" style="display: none;">
+                <img src="Thailand.jpeg"id="flag11" style="display: none;">
+                <img src="Togo.png"id="flag12" style="display: none;">
+            </div>
+        </main>
+    <div id="gameover-screen" class="screen" style="display: none;">
+        <h1>Game Over</h1>
+        <a href="index.html">Play Again</a>
+    </div>
+    </div>
+    <p>What is the name of the Country</p>
+    <div>
+    <input type="radio" id='choice-1' name='choice' />
+    <label id="choice-1-label">France</label>
+    </div>
+    <div>
+    <input type="radio" id='choice-2' name= 'choice' />
+    <label id="choice-2-label">Belgium</label>
+    </div>
+    <div>
+    <input type="radio" id= 'choice-3'  name= 'choice' />
+    <label id="choice-3-label">Tunisia</label>
+    </div>
+    <div>
+    <input type="radio" id= 'choice-4' name= 'choice' />
+    <label id="choice-4-label">Chile</label>
+    </div>
+    <button type="submit" onclick="correctAnswer();" id="answer">submit</button>
+    <script src="main.js"></script>
+</body>
+</html>
+
