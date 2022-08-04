@@ -43,11 +43,11 @@
     margin: -40px;
   }
   #flag1{
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 100px;
   }
   #flag2{
-    width: 40px;
+    width: 0px;
     height: 40px;
   }
   #flag3{
@@ -91,65 +91,29 @@
 
   #flag12{
   
-    width: 40px;
+    width: 80px;
     height: 40px;
   }
 
 /* start page style*/
+.bg-video {
+  height:400px;
+  width:100%;
+  overflow:hidden;
+}
 .bg-video video {
-  max-width: 40%;
-  max-height: 40% ;
-  overflow: hidden;
+  width: 100%;
+  height: 800px;
 }
-.bg-video{
-  background-image: url(world.png);
-  position: relative;
-  background-size: cover;
-  overflow: hidden;
-}
+
 .btn{
   font-weight: bold;
   color: green;
   font-size: 50px;
   text-align: center;
 }
-#helScreen{
-  top: 500px
+#instructions{
+  font-size: 30px;
 
 }
-#startScreen{
-  position: inherit;
-}
 
-/* End Page CSS*/
-
-.end-form-container{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 30rem;
-}
-input{
-  margin-bottom: 1rem;
-  width: 20px;
-  padding: 1px;
-  font-size: 1px;
-  border: none;
-}
-input::placeholder{
-  color:#aaa;
-}
-#end-text{
-  font-size: 2px;
-  color: #fff;
-  text-align: center;
-}
-#savedCash{
-  border:none;
-}
-.gohome{
-  margin-left: 1rem;
-  font-size:2px;
-  color: black;
-}

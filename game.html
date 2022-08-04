@@ -11,9 +11,7 @@
 
     <div id="container">
         <aside id="prize"><h2 id= "cash">0</h2></aside>
-        <label id="seconds"> Time Left 00</label>
-        <main> 
-            <canvas id="game"></canvas>
+        <label id="seconds" style="display: inline-block"> Time Left 00</label>
             <div class="image">
                 <img src="Belgium.png"id="flag1" size="5" style="display:none;">
                 <img src="Burundi.webp"id="flag2" style="display:none;">
@@ -28,30 +26,36 @@
                 <img src="Thailand.jpeg"id="flag11" style="display: none;">
                 <img src="Togo.png"id="flag12" style="display: none;">
             </div>
+        <main>
+            <canvas id="game"></canvas>
         </main>
+    </div>
     <div id="gameover-screen" class="screen" style="display: none;">
         <h1>Game Over</h1>
         <a href="index.html">Play Again</a>
     </div>
-    </div>
-    <p>What is the name of the Country</p>
-    <div>
-    <input type="radio" id='choice-1' name='choice' />
-    <label id="choice-1-label">France</label>
-    </div>
-    <div>
-    <input type="radio" id='choice-2' name= 'choice' />
-    <label id="choice-2-label">Belgium</label>
-    </div>
-    <div>
-    <input type="radio" id= 'choice-3'  name= 'choice' />
-    <label id="choice-3-label">Tunisia</label>
-    </div>
-    <div>
-    <input type="radio" id= 'choice-4' name= 'choice' />
-    <label id="choice-4-label">Chile</label>
-    </div>
-    <button type="submit" onclick="correctAnswer();" id="answer">submit</button>
+    <form
+        <div id="multiple-choice" style="display:block;">
+        <p>What is the name of the Country</p>
+        <div>
+            <input type="radio" id='choice-1' name='choice' value="country-1"/>
+            <label for="country-1" id="choice-1-label">France</label>
+        </div>
+        <div>
+            <input type="radio" id='choice-2' name='choice' value="country-2"/>
+            <label for="country-2" id="choice-2-label">Belgium</label>
+        </div>
+        <div>
+            <input type="radio" id='choice-3'  name='choice' value="country-3"/>
+             <label for="country-3" id="choice-3-label">Tunisia</label>
+        </div>
+        <div>
+            <input type="radio" id='choice-4' name='choice' value="country-4"/>
+            <label for="country-4" id="choice-4-label">Chile</label>
+        </div>
+        </div>
+    </form>
+    <button type="button" onclick="correctAnswer();" id="answer" style="display:inline-block;">submit</button>
     <script src="main.js"></script>
 </body>
 </html>
