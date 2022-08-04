@@ -8,22 +8,25 @@
     <link rel="styleSheet" href="style.css">
 </head>
 <body>
-    <div class='screen' id="startScreen">
+    <h1>Guess The Country</h1>
+    <div class='screen' id='startScreen'>
         <section id="main">
             <div class="bg-video">
                 <video autoplay muted loop>
-                    <source src="pexels-lara-jameson-8828851.mp4" type="video/mp4">
+                    <source src="pexels-lara-jameson-8828851.mp4"  type="video/mp4">
                 </video>
             </div>
         </section>
-        <a href="index.html" class="btn">Play</a>
+        <a href="index.html" class="btn">START</a>
         <button type='button' id='help'>INSTRUCTIONS</button>
     </div>
-    <div class="screen hide" id="helpScreen">
+
+    <div class='screen hide' id='helpScreen'>
         <h2>HOW TO PLAY</h2>
         <p id='instructions'></p>
         <button type='button' id='return'>BACK</button>
     </div>
 <script src="start.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

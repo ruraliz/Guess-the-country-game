@@ -24,7 +24,10 @@ const image9= document.getElementById('flag9')
 const image10= document.getElementById('flag10')
 const image11= document.getElementById('flag11')
 const image12= document.getElementById('flag12')
+const gameOver= document.getElementById('gameover-screen')
 
+
+function gameStart(){
 image1.style.display= 'block';
 setTimeout(function(){
     choiceOneLabel.textContent= 'Denmark'
@@ -105,6 +108,12 @@ setTimeout(function(){
 image12.style.display= 'block'
 setTimeout(function(){
     image12.style.display= 'none'
+gameOver.style.display='block'
+clearInterval(gameStart)
+setTimeout(function(){
+    alert('Game Over')
+
+},1000);
 },4000);
 },4000);
 },4000);
@@ -117,6 +126,9 @@ setTimeout(function(){
 },4000);
 },4000);
 },4000);
+
+}
+gameStart()
 
 
 
@@ -142,11 +154,11 @@ const choiceFourLabel = document.getElementById('choice-4-label');
 
 //grab answer
    function correctAnswer(){
-        if(image1.style.display= 'block' && choiceTwo.checked === true){
+        if(image1.style.display= 'block' && answer.value === 'Belgium'){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image2.style.display= 'block' && choiceFour === true ){
+        } else if(image2.style.display= 'block' && choiceFourLabel.checked === true ){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
@@ -224,3 +236,15 @@ function timer()
 
  document.getElementById("seconds").innerHTML="Time Left " + seconds; 
  }
+ //end game
+
+ //function gameEnd(){
+   // gameStart(function(){
+   //    gameOver.style.display= 'block'; 
+        //console.log('done')
+   // })
+ //}
+ //gameEnd();
+
+
+ 

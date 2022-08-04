@@ -96,11 +96,29 @@
   }
 
 /* start page style*/
-
+.bg-video video {
+  max-width: 40%;
+  max-height: 40% ;
+  overflow: hidden;
+}
+.bg-video{
+  background-image: url(world.png);
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+}
 .btn{
   font-weight: bold;
   color: green;
   font-size: 50px;
+  text-align: center;
+}
+#helScreen{
+  top: 500px
+
+}
+#startScreen{
+  position: inherit;
 }
 
 /* End Page CSS*/
