@@ -6,6 +6,7 @@ const ctx= game.getContext('2d')
 game.setAttribute('height', getComputedStyle(game)['height'])  
 game.setAttribute('width', getComputedStyle(game)['width']);
 
+
 //flags set timeout
 const image1= document.getElementById('flag1')
 const image2= document.getElementById('flag2')
@@ -23,6 +24,17 @@ const gameOver= document.getElementById('gameover-screen')
 const timing= document.getElementById('seconds')
 const questions= document.getElementById("multiple-choice");
 const answer= document.getElementById('answer')
+
+
+//mutiple choice
+const choiceOne = document.getElementById('choice-1');
+const choiceTwo = document.getElementById('choice-2');
+const choiceThree = document.getElementById('choice-3');
+const choiceFour = document.getElementById('choice-4');
+const choiceOneLabel = document.getElementById('choice-1-label');
+const choiceTwoLabel = document.getElementById('choice-2-label');
+const choiceThreeLabel = document.getElementById('choice-3-label');
+const choiceFourLabel = document.getElementById('choice-4-label');
 
 image1.style.display= 'block';
 setTimeout(function(){ 
@@ -126,78 +138,84 @@ gameOver.style.display='block'
 },52000);
 
 
-
 //radio button clear
 
-//mutiple choice
-const choiceOne = document.getElementById('choice-1');
-const choiceTwo = document.getElementById('choice-2');
-const choiceThree = document.getElementById('choice-3');
-const choiceFour = document.getElementById('choice-4');
-const choiceOneLabel = document.getElementById('choice-1-label');
-const choiceTwoLabel = document.getElementById('choice-2-label');
-const choiceThreeLabel = document.getElementById('choice-3-label');
-const choiceFourLabel = document.getElementById('choice-4-label');
+
+/*function correctAnswer(){
+if(image1.style.display='block'){
+console.log('image')
+}else{
+    console.log('no')
+}
+if (image2.style.display='block'){
+   console.log('image2')
+}else{
+    console.log('yay')
+}*/
+
 
 //choiceTwo.setAttribute('style','checked:false');
 //choiceOne.setAttribute('style','checked:false');
 
 //When game ends 
 
+
+//switch
+
 //grab answer
-   function correctAnswer(){
-        if(image1.style.display='block' && choiceOne==='France'){
+  function correctAnswer(){
+        if(image1.style.display!='none' && choiceTwo.checked){
             window.alert('Correct');
             console.log('correct')
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-         }else if (image2.style.display='block' && choiceFour.checked){
+         }else if (image2.style.display!='none' && choiceFour.checked){
             window.alert('Correct');
             console.log('correct')
             let newCash2= Number(cash.textContent) + 50;
             cash.textContent= newCash2;
-        } else if(image3.style.display='block' && choiceThree.checked){
+        }else if(image3.style.display!='none' && choiceFour.checked){
             window.alert('Correct');
             console.log('correct')
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image4.style.display='block' && choiceFour.checked){
+        }else if(image4.style.display!='none' && choiceThree.checked){
             window.alert('Correct');
             console.log('correct')
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image5.style.display='block' && choiceTwo.checked){
+        }else if(image5.style.display!='none' && choiceOne.checked){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-      /*  } else if(image6.style.display= 'block' && answer.value === 'Belgium'){
+        }else if(image6.style.display!='none' && choiceTwo.checked){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image7.style.display= 'block' && answer.value === 'Belgium'){
+        }else if(image7.style.display!='none' && choiceOne.checked){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image8.style.display= 'block' && answer.value === 'Belgium'){
+        }else if(image8.style.display!='none' && choiceFour.checked){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image9.style.display= 'block' && answer.value === 'Belgium'){
+        }else if(image9.style.display!='none' && choiceTwo.checked){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image10.style.display= 'block' && answer.value === 'Belgium'){
+        }else if(image10.style.display!='none' && choiceTwo.checked){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image11.style.display= 'block' && answer.value === 'Belgium'){
+        }else if(image11.style.display!='none' && choiceFour.checked){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        } else if(image12.style.display= 'block' && answer.value === 'Belgium'){
+        }else if(image12.style.display!='none' && choiceThree.checked){
             window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
-            cash.textContent= newCash;*/
+            cash.textContent= newCash;
         } else{
             window.alert('Try again')
             console.log('wrong')
