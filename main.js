@@ -1,12 +1,6 @@
 const game = document.getElementById("game");
 const cash= document.getElementById('cash');
 
-
-const ctx= game.getContext('2d')
-game.setAttribute('height', getComputedStyle(game)['height'])  
-game.setAttribute('width', getComputedStyle(game)['width']);
-
-
 //flags set timeout
 const image1= document.getElementById('flag1')
 const image2= document.getElementById('flag2')
@@ -25,7 +19,7 @@ const timing= document.getElementById('seconds')
 const questions= document.getElementById("multiple-choice");
 const answer= document.getElementById('answer')
 
-
+const ctx= game.getContext('2d')
 //mutiple choice
 const choiceOne = document.getElementById('choice-1');
 const choiceTwo = document.getElementById('choice-2');
@@ -44,7 +38,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Burundi'
     image1.style.display= 'none';
 image2.style.display= 'block' 
-},4000);
+},10000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Togo'
     choiceTwoLabel.textContent= 'France'
@@ -52,7 +46,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Cuba'
     image2.style.display= 'none'
 image3.style.display= 'block'
-},8000);
+},20000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Thailand'
     choiceTwoLabel.textContent= 'Belgium'
@@ -60,7 +54,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Chile'
     image3.style.display= 'none'
 image4.style.display= 'block'
-},12000);
+},30000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'France'
     choiceTwoLabel.textContent= 'Belgium'
@@ -68,7 +62,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'South Korea'
     image4.style.display= 'none'
 image5.style.display= 'block'
-},16000);
+},40000);
  setTimeout(function(){
     choiceOneLabel.textContent= 'Brazil'
     choiceTwoLabel.textContent= 'Kenya'
@@ -76,7 +70,7 @@ image5.style.display= 'block'
     choiceFourLabel.textContent= 'Qatar'
     image5.style.display= 'none'
 image6.style.display= 'block'
-},20000);
+},50000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Lithuania'
     choiceTwoLabel.textContent= 'India'
@@ -84,7 +78,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Rwanda'
     image6.style.display= 'none'
 image7.style.display= 'block'
-},24000);
+},60000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Tanzania'
     choiceTwoLabel.textContent= 'Haiti'
@@ -92,7 +86,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Morocco'
     image7.style.display= 'none'
 image8.style.display= 'block'
-},28000);
+},70000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Rusia'
     choiceTwoLabel.textContent= 'Puerto Rico'
@@ -100,7 +94,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Jordan'
     image8.style.display= 'none'
 image9.style.display= 'block'
-},32000);
+},80000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Somalia'
     choiceTwoLabel.textContent= 'Rwanda'
@@ -108,7 +102,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Philippines'
     image9.style.display= 'none'
 image10.style.display= 'block'
-},36000);
+},90000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Costa Rica'
     choiceTwoLabel.textContent= 'China'
@@ -116,7 +110,7 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Thailand'
     image10.style.display= 'none'
 image11.style.display= 'block'
-},40000);
+},100000);
 setTimeout(function(){
     choiceOneLabel.textContent= 'Sweden'
     choiceTwoLabel.textContent= 'India'
@@ -124,10 +118,10 @@ setTimeout(function(){
     choiceFourLabel.textContent= 'Chad'
     image11.style.display= 'none'
 image12.style.display= 'block'
-},44000);
+},110000);
 setTimeout(function(){
     image12.style.display= 'none'
-},48000);
+},120000);
 questions.style.display='block'
 setTimeout(function(){
     alert('Game Over')
@@ -135,7 +129,7 @@ setTimeout(function(){
     timing.style.display='none'
     answer.style.display='none'
 gameOver.style.display='block'
-},52000);
+},121000);
 
 
 //radio button clear
@@ -227,12 +221,12 @@ if (image2.style.display='block'){
 
 //Timer
 
-var seconds=5;
+var seconds=9;
 var counter = null;
 
 function reset_timer()
 {
-    seconds= 5;
+    seconds= 10;
     counter=setInterval(timer, 1000); 
 }
 

@@ -34,15 +34,14 @@
         <h1>Game Over</h1>
         <a href="index.html">Play Again</a>
     </div>
-    <form
         <div id="multiple-choice" style="display:block;">
         <p>What is the name of the Country</p>
         <div>
-            <input type="radio" id='choice-1' name='choice' value="country-1"/>
+            <input type="radio" id='choice-1' name='choice' value="country-1" !checked='false'>
             <label for="country-1" id="choice-1-label">France</label>
         </div>
         <div>
-            <input type="radio" id='choice-2' name='choice' value="country-2"/>
+            <input type="radio" id='choice-2' name='choice' value="country-2" !checked='false'>
             <label for="country-2" id="choice-2-label">Belgium</label>
         </div>
         <div>
@@ -54,7 +53,6 @@
             <label for="country-4" id="choice-4-label">Chile</label>
         </div>
         </div>
-    </form>
     <button type="button" onclick="correctAnswer();" id="answer" style="display:inline-block;">submit</button>
     <script src="main.js"></script>
 </body>
