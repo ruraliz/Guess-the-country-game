@@ -29,7 +29,7 @@
   .image{
     position: absolute;
     bottom: 200px;
-    right:400px;
+    right: 600px;
   }
   #seconds{
     font-weight: bold;
@@ -104,13 +104,115 @@
 }
 
 .btn{
-  font-weight: bold;
-  color: green;
-  font-size: 50px;
-  text-align: center;
+
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 70px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 #instructions{
-  font-size: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #e55f17;
+  --color-2: #1381b1;
+  --color-3: #dd7472;
+}
+
+.title-word-2 {
+  --color-1: #dba32b;
+  --color-2: #72c9bf;
+  --color-3: #12555a;
+}
+
+.title-word-3 {
+  --color-1: #57c0b4;
+  --color-2: #eb8b89;
+  --color-3: #59bc46;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #c553df;
+  --color-3: #b4bb57;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+/*gameover*/
+#game-over{
+  font-size:35px ;
+}
+#play-again{
+
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #231557 0%,
+     #44107a 29%,
+     #ff1361 67%,
+     #fff800 100%
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 200% auto;
+   color: #fff;
+   background-clip: text;
+   text-fill-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+       font-size: 50px;
+ }
+ 
+ @keyframes textclip {
+   to {
+     background-position: 200% center;
+   }
 
 }
 

@@ -1,5 +1,10 @@
 const game = document.getElementById("game");
 const cash= document.getElementById('cash');
+const playerName= document.getElementById('player_name');
+const saveScoreBtn= document.getElementById("submit_score");
+const mostRecentScore= document.getElementById('mostRecentScore')
+const finalScore= document.getElementById("finalScore")
+const highestScores= document.getElementById('highScores')
 
 //flags set timeout
 const image1= document.getElementById('flag1')
@@ -14,11 +19,12 @@ const image9= document.getElementById('flag9')
 const image10= document.getElementById('flag10')
 const image11= document.getElementById('flag11')
 const image12= document.getElementById('flag12')
-const gameOver= document.getElementById('gameover-screen')
 const timing= document.getElementById('seconds')
-const questions= document.getElementById("multiple-choice");
 const answer= document.getElementById('answer')
 
+
+const questions= document.getElementById("multiple-choice");
+const gameOver= document.getElementById('gameover-screen')
 const ctx= game.getContext('2d')
 //mutiple choice
 const choiceOne = document.getElementById('choice-1');
@@ -129,93 +135,61 @@ setTimeout(function(){
     timing.style.display='none'
     answer.style.display='none'
 gameOver.style.display='block'
+highestScores.style.display='block'
 },121000);
 
 
-//radio button clear
-
-
-/*function correctAnswer(){
-if(image1.style.display='block'){
-console.log('image')
-}else{
-    console.log('no')
-}
-if (image2.style.display='block'){
-   console.log('image2')
-}else{
-    console.log('yay')
-}*/
-
-
-//choiceTwo.setAttribute('style','checked:false');
-//choiceOne.setAttribute('style','checked:false');
-
-//When game ends 
-
-
-//switch
 
 //grab answer
   function correctAnswer(){
         if(image1.style.display!='none' && choiceTwo.checked){
-            window.alert('Correct');
             console.log('correct')
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
          }else if (image2.style.display!='none' && choiceFour.checked){
-            window.alert('Correct');
             console.log('correct')
-            let newCash2= Number(cash.textContent) + 50;
-            cash.textContent= newCash2;
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
         }else if(image3.style.display!='none' && choiceFour.checked){
-            window.alert('Correct');
             console.log('correct')
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
         }else if(image4.style.display!='none' && choiceThree.checked){
-            window.alert('Correct');
             console.log('correct')
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
         }else if(image5.style.display!='none' && choiceOne.checked){
-            window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
         }else if(image6.style.display!='none' && choiceTwo.checked){
-            window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
         }else if(image7.style.display!='none' && choiceOne.checked){
-            window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
         }else if(image8.style.display!='none' && choiceFour.checked){
-            window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
         }else if(image9.style.display!='none' && choiceTwo.checked){
-            window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
         }else if(image10.style.display!='none' && choiceTwo.checked){
-            window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
         }else if(image11.style.display!='none' && choiceFour.checked){
-            window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
         }else if(image12.style.display!='none' && choiceThree.checked){
-            window.alert('Correct');
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
         } else{
-            window.alert('Try again')
             console.log('wrong')
             let newCash= Number(cash.textContent) - 50;
             cash.textContent= newCash;
         }
+        console.log(cash.textContent)
+        localStorage.setItem('mostRecentScore', Number(cash.textContent))
+
     }
 
 
@@ -244,15 +218,37 @@ function timer()
 
  document.getElementById("seconds").innerHTML="Time Left " + seconds; 
  }
- //end game
+ //score tally
+const highScores= JSON.parse(localStorage.getItem("highScores")) || [];
+console.log(highScores);
 
- //function gameEnd(){
-   // gameStart(function(){
-   //    gameOver.style.display= 'block'; 
-        //console.log('done')
-   // })
- //}
- //gameEnd();
+finalScore.innerText= mostRecentScore;
 
+playerName.addEventListener('keyup',()=>{
+    saveScoreBtn.disabled = !playerName.value;
+});
+
+saveHighScore = e=> {
+    console.log('clicked the submit score button!');
+    e.preventDefault();
+const score= {
+    score: Number(cash.textContent),
+    name:playerName.value
+}
+highScores.push(score);
+highScores.sort((a,b) => b.score - a.score);  //if there is new score replaces old score
+highScores.splice(5)  //cut off list at 5 players 
+
+localStorage.setItem('highScores', JSON.stringify(highScores));
+console.log(highScores);
+};
+
+const highScoresList= document.getElementById("highScoresList");
+const highScoresShow= JSON.parse(localStorage.getItem('highScores')) || [];
+
+highScoresList.innerHTML= highScoresShow.map(score =>{
+    return `<li class='high-score'>${score.name}-${score.score}</li>`;
+})
+.join("")
 
  
