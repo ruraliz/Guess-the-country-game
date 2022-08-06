@@ -19,6 +19,7 @@ Approach taken
 
 For this game I used HTML, CSS and Javascript, the approach was to use HTML to set the browser fundation and use Javascript to get all the pieces moving and working, especially the pictures and the multiple Choice questions(In code bellow). I used CSS to add more styling and give more visual effects since the game itself is pretty simple. 
 
+```
 image1.style.display= 'block';
 setTimeout(function(){ 
     choiceOneLabel.textContent= 'Denmark'
@@ -120,6 +121,8 @@ setTimeout(function(){
 gameOver.style.display='block'
 highestScores.style.display='block'
 },121000);
+
+```
 
 
 ##
