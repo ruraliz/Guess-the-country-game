@@ -49,4 +49,6 @@ Given more time I would improve the game by implementing:
 
 -Since the player can click on answer multiple times a rack-up points, I would find way to disable that
 
+- Have the flags/multiple-Choices show-up in a random fashion in a loop, each appearing in a specific spot on the screen. 
+
 
