@@ -25,9 +25,6 @@ To play the game, guess the country name by flag and submit
 <img width="1174" alt="Screen Shot 2022-08-05 at 11 02 04 PM" src="https://user-images.githubusercontent.com/107972391/183236746-23f9457c-703f-46d0-a02d-b4f1e6766ca3.png">
 
 
-
-<img width="921" alt="Screen Shot 2022-08-05 at 11 07 03 PM" src="https://user-images.githubusercontent.com/107972391/183236749-2a0b1d83-36c3-4906-9f42-dd2e3bf3d324.png">
-
 ##
 Instructions
 
