@@ -36,6 +36,7 @@ const choiceTwoLabel = document.getElementById('choice-2-label');
 const choiceThreeLabel = document.getElementById('choice-3-label');
 const choiceFourLabel = document.getElementById('choice-4-label');
 
+//Picture and multipleChoice
 image1.style.display= 'block';
 setTimeout(function(){ 
     choiceOneLabel.textContent= 'Denmark'
@@ -218,6 +219,7 @@ function timer()
 
  document.getElementById("seconds").innerHTML="Time Left " + seconds; 
  }
+
  //score tally
 const highScores= JSON.parse(localStorage.getItem("highScores")) || [];
 console.log(highScores);
