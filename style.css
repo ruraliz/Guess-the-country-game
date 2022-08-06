@@ -12,14 +12,14 @@
   body {
     padding-top: 1em;
     text-align: center;
-    background-color:rgba(128, 128, 128, 0.338);
+    background-color:rgb(157, 198, 222);
     background-size: cover;
     background-repeat: space;
     position: relative;
   }
   #container {
     max-width: 50em;
-    background-color: rgb(172, 163, 165);
+    background-color:rgb(157, 198, 222);
     margin: auto;
     padding: 1em;
     display: grid;
