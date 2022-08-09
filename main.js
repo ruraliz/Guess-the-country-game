@@ -26,7 +26,7 @@ const answer= document.getElementById('answer')
 const questions= document.getElementById("multiple-choice");
 const gameOver= document.getElementById('gameover-screen')
 const ctx= game.getContext('2d')
-//mutiple choice
+//multiple choice
 const choiceOne = document.getElementById('choice-1');
 const choiceTwo = document.getElementById('choice-2');
 const choiceThree = document.getElementById('choice-3');
@@ -135,61 +135,61 @@ setTimeout(function(){
     questions.style.display='none'
     timing.style.display='none'
     answer.style.display='none'
-gameOver.style.display='block'
-highestScores.style.display='block'
+    gameOver.style.display='block'
+    highestScores.style.display='block'
 },121000);
 
 
 
 //grab answer
-  function correctAnswer(){
-        if(image1.style.display!='none' && choiceTwo.checked){
-            console.log('correct')
+function correctAnswer(){
+    if(image1.style.display!='none' && choiceTwo.checked){
+        console.log('correct')
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if (image2.style.display!='none' && choiceFour.checked){
+        console.log('correct')
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image3.style.display!='none' && choiceFour.checked){
+        console.log('correct')
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image4.style.display!='none' && choiceThree.checked){
+        console.log('correct')
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image5.style.display!='none' && choiceOne.checked){
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image6.style.display!='none' && choiceTwo.checked){
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image7.style.display!='none' && choiceOne.checked){
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image8.style.display!='none' && choiceFour.checked){
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image9.style.display!='none' && choiceTwo.checked){
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-         }else if (image2.style.display!='none' && choiceFour.checked){
-            console.log('correct')
+    }else if(image10.style.display!='none' && choiceTwo.checked){
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        }else if(image3.style.display!='none' && choiceFour.checked){
-            console.log('correct')
+    }else if(image11.style.display!='none' && choiceFour.checked){
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        }else if(image4.style.display!='none' && choiceThree.checked){
-            console.log('correct')
+    }else if(image12.style.display!='none' && choiceThree.checked){
             let newCash= Number(cash.textContent) + 50;
             cash.textContent= newCash;
-        }else if(image5.style.display!='none' && choiceOne.checked){
-            let newCash= Number(cash.textContent) + 50;
-            cash.textContent= newCash;
-        }else if(image6.style.display!='none' && choiceTwo.checked){
-            let newCash= Number(cash.textContent) + 50;
-            cash.textContent= newCash;
-        }else if(image7.style.display!='none' && choiceOne.checked){
-            let newCash= Number(cash.textContent) + 50;
-            cash.textContent= newCash;
-        }else if(image8.style.display!='none' && choiceFour.checked){
-            let newCash= Number(cash.textContent) + 50;
-            cash.textContent= newCash;
-        }else if(image9.style.display!='none' && choiceTwo.checked){
-            let newCash= Number(cash.textContent) + 50;
-            cash.textContent= newCash;
-        }else if(image10.style.display!='none' && choiceTwo.checked){
-            let newCash= Number(cash.textContent) + 50;
-            cash.textContent= newCash;
-        }else if(image11.style.display!='none' && choiceFour.checked){
-            let newCash= Number(cash.textContent) + 50;
-            cash.textContent= newCash;
-        }else if(image12.style.display!='none' && choiceThree.checked){
-            let newCash= Number(cash.textContent) + 50;
-            cash.textContent= newCash;
-        } else{
-            console.log('wrong')
-            let newCash= Number(cash.textContent) - 50;
-            cash.textContent= newCash;
-        }
-        console.log(cash.textContent)
-        localStorage.setItem('mostRecentScore', Number(cash.textContent))
+    } else{
+        console.log('wrong')
+        let newCash= Number(cash.textContent) - 50;
+        cash.textContent= newCash;
+    }
+    console.log(cash.textContent)
+    localStorage.setItem('mostRecentScore', Number(cash.textContent))
 
     }
 
@@ -253,4 +253,4 @@ highScoresList.innerHTML= highScoresShow.map(score =>{
 })
 .join("")
 
- 
+  

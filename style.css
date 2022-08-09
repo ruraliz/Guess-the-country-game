@@ -1,15 +1,15 @@
 
 /* Game CSS*/
-  canvas{
-    background-image: url('world.png');
-    width: 90%;
-    height: 95%;
-    border: 10px inset black;
-    position: center;
-    background-size: 100% 100%;
-  }
+canvas{
+  background-image: url('world.png');
+  width: 90%;
+  height: 95%;
+  border: 10px inset black;
+  position: center;
+  background-size: 100% 100%;
+}
   
-  body {
+body {
     padding-top: 1em;
     text-align: center;
     background-color:rgb(157, 198, 222);
@@ -17,80 +17,79 @@
     background-repeat: space;
     position: relative;
   }
-  #container {
-    max-width: 50em;
-    background-color:rgb(157, 198, 222);
-    margin: auto;
-    padding: 1em;
-    display: grid;
-    grid-gap: 1em;
+#container {
+  max-width: 50em;
+  background-color:rgb(157, 198, 222);
+  margin: auto;
+  padding: 1em;
+  display: grid;
+  grid-gap: 1em;
 
-    }
-  .image{
-    position: absolute;
-    bottom: 200px;
-    right: 600px;
-  }
-  #seconds{
-    font-weight: bold;
-    font-size: 30px;
-    color: rgb(5, 96, 5)
-  }
-  #prize{
-    font-weight: bold;
-    font-size: 40px;
-    color: black;
-    margin: -40px;
-  }
-  #flag1{
-    width: 100px;
-    height: 100px;
-  }
-  #flag2{
-    width: 100px;
-    height: 100px;
-  }
-  #flag3{
-    width: 100px;
-    height: 100px;
-  }
-  #flag4{
-    width: 100px;
-    height: 100px;
-  }
-  #flag5{
-    width: 100px;
-    height: 100px;
-  }
-  #flag6{
-    width: 100px;
-    height: 100px;
-  }
-  #flag7{
-    width: 100px;
-    height: 100px;
-  }
-  #flag8{
-    width: 100px;
-    height: 100px;
-  }
-  #flag9{
-    width: 100px;
-    height: 100px;
-  }
-  #flag10{
-    width: 100px;
-    height: 100px;
-  }
-  #flag11{
-    width: 100px;
-    height: 100px;
-  }
-
-  #flag12{
-    width: 100px;
-    height: 100px;
-  }
+}
+.image{
+  position: absolute;
+  bottom: 200px;
+  right: 600px;
+}
+#seconds{
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(5, 96, 5)
+}
+#prize{
+  font-weight: bold;
+  font-size: 40px;
+  color: black;
+  margin: -40px;
+}
+#flag1{
+  width: 100px;
+  height: 100px;
+}
+#flag2{
+  width: 100px;
+  height: 100px;
+}
+#flag3{
+  width: 100px;
+  height: 100px;
+}
+#flag4{
+  width: 100px;
+  height: 100px;
+}
+#flag5{
+  width: 100px;
+  height: 100px;
+}
+#flag6{
+  width: 100px;
+  height: 100px;
+}
+#flag7{
+  width: 100px;
+  height: 100px;
+}
+#flag8{
+  width: 100px;
+  height: 100px;
+}
+#flag9{
+  width: 100px;
+  height: 100px;
+}
+#flag10{
+  width: 100px;
+  height: 100px;
+}
+#flag11{
+  width: 100px;
+  height: 100px;
+}
+#flag12{
+  width: 100px;
+  height: 100px;
+}
 
 /* start page style*/
 .bg-video {
@@ -104,7 +103,6 @@
 }
 
 .btn{
-
   text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
@@ -118,7 +116,6 @@
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -201,7 +198,6 @@
    background-size: 200% auto;
    color: #fff;
    background-clip: text;
-   text-fill-color: transparent;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    animation: textclip 2s linear infinite;

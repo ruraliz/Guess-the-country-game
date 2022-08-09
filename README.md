@@ -2,24 +2,39 @@
 
 Steps to install on local computer
 
-Go to repo on Github profile
-fork and clone repo
+Go to [repo](https://github.com/ruraliz/Guess-the-country-game.git
+) on Github profile
+`fork` and `clone` repo
 Clone to local machine
-
-https://github.com/ruraliz/Guess-the-country-game.git
 
 Otherwise 
 
-You can also go to repository and go to setting/pages- click on link to access game:
-https://ruraliz.github.io/Guess-the-country-game/
+You can also go to repository and go to setting/pages- click on link to access [game]
+(https://ruraliz.github.io/Guess-the-country-game/)
+
+## 
+
+Languagges used 
+
+| Language           | functionality |
+| -----------         | ----------- |
+| `JavaScript`       |control functionality of the game , timing, score tally, playe's guess, etc|
+| `CSS` |design the game, visuals, color schemes, flag placement|
+| `HTML`           | control game fundations, buttons, radio inputs and structure of game as a whole |
+
 
 ##
 
 Approach taken
 
-For this game I used HTML, CSS and Javascript, the approach was to use HTML to set the browser fundation and use Javascript to get all the pieces moving and working, especially the pictures and the multiple Choice questions(In code bellow). I used CSS to add more styling and give more visual effects since the game itself is pretty simple. 
 
-```
+My game is a guessing game, the player is given 10 seconds to guess the name of the country by the country's flag. At the end of the game they can add their name to a highscores list. 
+
+
+The code snippet bellow is the structure of the game timing. 
+
+
+```javascript 
 image1.style.display= 'block';
 setTimeout(function(){ 
     choiceOneLabel.textContent= 'Denmark'
@@ -124,6 +139,105 @@ highestScores.style.display='block'
 
 ```
 
+##
+Functionality of correct guesses were structured by the code snippet below in JavaScript 
+
+
+```javascript
+function correctAnswer(){
+    if(image1.style.display!='none' && choiceTwo.checked){
+        console.log('correct')
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if (image2.style.display!='none' && choiceFour.checked){
+        console.log('correct')
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image3.style.display!='none' && choiceFour.checked){
+        console.log('correct')
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image4.style.display!='none' && choiceThree.checked){
+        console.log('correct')
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image5.style.display!='none' && choiceOne.checked){
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image6.style.display!='none' && choiceTwo.checked){
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image7.style.display!='none' && choiceOne.checked){
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image8.style.display!='none' && choiceFour.checked){
+        let newCash= Number(cash.textContent) + 50;
+        cash.textContent= newCash;
+    }else if(image9.style.display!='none' && choiceTwo.checked){
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+    }else if(image10.style.display!='none' && choiceTwo.checked){
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+    }else if(image11.style.display!='none' && choiceFour.checked){
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+    }else if(image12.style.display!='none' && choiceThree.checked){
+            let newCash= Number(cash.textContent) + 50;
+            cash.textContent= newCash;
+    } else{
+        console.log('wrong')
+        let newCash= Number(cash.textContent) - 50;
+        cash.textContent= newCash;
+    }
+    console.log(cash.textContent)
+    localStorage.setItem('mostRecentScore', Number(cash.textContent))
+
+    }
+```
+
+
+##
+
+
+Another important part of the game for the player is getting on highscore list, the code snippet bellow shows how I was able to make the list and limit it to 5 high score.
+
+
+``` javascript
+const highScores= JSON.parse(localStorage.getItem("highScores")) || [];
+console.log(highScores);
+
+finalScore.innerText= mostRecentScore;
+
+playerName.addEventListener('keyup',()=>{
+    saveScoreBtn.disabled = !playerName.value;
+});
+
+saveHighScore = e=> {
+    console.log('clicked the submit score button!');
+    e.preventDefault();
+const score= {
+    score: Number(cash.textContent),
+    name:playerName.value
+}
+highScores.push(score);
+highScores.sort((a,b) => b.score - a.score);  //if there is new score replaces old score
+highScores.splice(5)  //cut off list at 5 players 
+
+localStorage.setItem('highScores', JSON.stringify(highScores));
+console.log(highScores);
+};
+
+const highScoresList= document.getElementById("highScoresList");
+const highScoresShow= JSON.parse(localStorage.getItem('highScores')) || [];
+
+highScoresList.innerHTML= highScoresShow.map(score =>{
+    return `<li class='high-score'>${score.name}-${score.score}</li>`;
+})
+.join("")
+
+```
+
 
 ##
 Wireframe
@@ -171,10 +285,9 @@ Future Improvements
 Given more time I would improve the game by implementing:
 
 
-- a way that if the player guesses correctly they can move on to next flag 
-
+- A way that if the player guesses correctly they can move on to next flag 
+- The radio input selection rolls over to the next round of guesses because of the way the codes are structured in javascript, I would write them in a way to prevent this from happening. 
 - Since the player can click on answer multiple times a rack-up points, I would find way to disable that
-
 - Have the flags/multiple-Choices show-up in a random fashion in a loop, each appearing in a specific spot on the screen. 
 
 
